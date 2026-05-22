@@ -3,18 +3,19 @@ import time
 print("Coffee Machine")
 
 def start_up():
-    start = input("Type Start to Start Brewing: ")
-    if start == "Start":
+    start = input("Type Brew or Clean: ")
+    if start == "Brew":
         time.sleep(1)
         print("Starting brewing process:")
         machine_start_time()
         machine_state = "Brewing"
         print("Machine State:", machine_state)
         return machine_state    
-    else:
-        print("Machine Shutdown.")
-        exit()
-
+    elif start == "Clean":
+        print("Cleaning mode selected.")
+        machine_state = "Preparing for cleaning"
+        return machine_state
+    
 def machine_start_time():
     start_time = time.time()
     return start_time
@@ -75,6 +76,27 @@ while machine_state == "Brewing":
         time.sleep(1)
     else:
         print()
+        print("Brewing complete.")
         time.sleep(1)
-        print("Bean or Water level too low.")
+        machine_state = "Preparing for cleaning"
+        print("Machine State:", machine_state)
+       
+while machine_state == "Preparing for cleaning":   
+    if water <=30 or water >=60:
+        time.sleep(1)
+        print("Beginning cleaning process.")
+        time.sleep(1)
+        print("Cleaning .", end='\r')
+        time.sleep(2)
+        print("Cleaning ..", end='\r')
+        time.sleep(2)
+        print("Cleaning ...")
+        time.sleep(2)
+        print("Cleaning complete.")
+        machine_state = "Idle"
+    else:
+        print()
+        time.sleep(1)
+        print("Cleaning error. Please try again.")
         exit()
+
