@@ -1,0 +1,1 @@
+print("Peananormal Metaphysical Research™")
