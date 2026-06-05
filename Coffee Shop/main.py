@@ -3,7 +3,7 @@ import os
 import reciept
 
 print("Bean There, Done That Coffee")
-receipt_path = 'reciept.py'
+receipt_path = 'Coffee Shop/reciept.py'
 
 def item1func(item1):
    item1 = "Latte"
