@@ -1,0 +1,47 @@
+Part 1: Generate telemetry (20 points)
+Create a program that:
+1. Imports the random module.
+2. Generates 10 random temperatures between 20°C and 120°C.
+3. Stores all readings in a list named temperatures.
+4. Prints each temperature as it is generated.
+Example:
+Sensor 1: 67°C
+Sensor 2: 104°C
+Sensor 3: 82°C
+...
+
+-
+Part 2: Analyze telemetry (25 points)
+After generating the readings, calculate and print:
+- Average temperature, rounded to two decimal places.
+- Highest temperature.
+- Lowest temperature.
+- Number of readings at or above 100°C.
+Use Python's built-in functions where appropriate.
+Part 3: GO/NO-GO determination (20 points)
+Write a conditional that determines the vehicle's status.
+Condition	Status
+No readings ≥100°C	GO FOR LAUNCH
+Exactly 1 reading ≥100°C	CAUTION - REVIEW REQUIRED
+2 or more readings ≥100°C	NO GO - THERMAL LIMIT EXCEEDED
+Print the appropriate status.
+Part 4: Create a function (20 points)
+Create a function named:
+def check_temperature(temp):
+
+
+
+It should accept a temperature and return one of three strings:
+- "NOMINAL" for temperatures below 80°C.
+- "CAUTION" for temperatures from 80°C through 99°C.
+- "CRITICAL" for temperatures of 100°C or higher.
+Call this function for every temperature in your list and print the returned status.
+Part 5: Error handling (15 points)
+Ask the user to enter a maximum acceptable temperature.
+
+Your program must:
+1. Convert their input into a number.
+2. Handle invalid inputs such as "hello" without crashing.
+3. Print "INVALID INPUT" if conversion fails.
+4. If valid, print how many readings exceed the user's entered limit.
+You can use try and except, but I won't give you the full syntax unless you ask.
