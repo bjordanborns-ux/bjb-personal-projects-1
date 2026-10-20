@@ -18,24 +18,27 @@ After generating the readings, calculate and print:
 - Lowest temperature.
 - Number of readings at or above 100°C.
 Use Python's built-in functions where appropriate.
+
+
 Part 3: GO/NO-GO determination (20 points)
 Write a conditional that determines the vehicle's status.
+
 Condition	Status
+
 No readings ≥100°C	GO FOR LAUNCH
 Exactly 1 reading ≥100°C	CAUTION - REVIEW REQUIRED
 2 or more readings ≥100°C	NO GO - THERMAL LIMIT EXCEEDED
 Print the appropriate status.
+
 Part 4: Create a function (20 points)
 Create a function named:
 def check_temperature(temp):
-
-
-
 It should accept a temperature and return one of three strings:
 - "NOMINAL" for temperatures below 80°C.
 - "CAUTION" for temperatures from 80°C through 99°C.
 - "CRITICAL" for temperatures of 100°C or higher.
 Call this function for every temperature in your list and print the returned status.
+
 Part 5: Error handling (15 points)
 Ask the user to enter a maximum acceptable temperature.
 
